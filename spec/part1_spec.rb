@@ -5,16 +5,24 @@ require_relative '../lib/ruby_intro'
 describe 'Ruby intro part 1' do
   describe '#sum' do
 
+    # the 'points' denotes how many points there are
+    # the do starts the tests
     it 'returns correct sum [1 point]', points: 1 do
+      # checks these cases to make sure they are all correct
       expect(sum([1, 2, 3, 4, 5])).to be_a_kind_of Integer
       expect(sum([1, 2, 3, 4, 5])).to eq(15)
       expect(sum([1, 2, 3, 4, -5])).to eq(5)
       expect(sum([1, 2, 3, 4, -5, 5, -100])).to eq(-90)
+      # if all pass then give points
     end
 
+    # the 'points' denotes how many points there are
+    # the do starts the tests
     it 'works on the empty array [2 points]', points: 2 do
+      # checks these cases to make sure they are all correct
       expect { sum([]) }.not_to raise_error
       expect(sum([])).to be_zero
+      # if all pass then give points
     end
   end
 
